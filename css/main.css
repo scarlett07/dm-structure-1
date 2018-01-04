@@ -1,0 +1,45 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.container {
+    margin: 0auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 400px;
+    grid-gap: 7px;
+    grid-template-areas:
+        "a a a a a a a a a a a a"
+        "b b b b b b b b c c c c";
+}
+.styleFont{
+  color: white;
+  text-align: center;
+  font-size: 300%;
+}
+
+
+.a{
+  grid-area: a;
+  background-color: yellow;
+}
+
+.b{
+  grid-area: b;
+  background-color: #27DAEC;
+}
+
+.c{
+  grid-area: c;
+  background-color: #E486EA;
+}
+
+@media screen and (max-width: 786px) {
+    .container {
+        grid-template-rows: 120px 350px 120px;
+        grid-template-areas:
+            "a a a a a a a a a a a a"
+            "b b b b b b b b b b b b"
+            "c c c c c c c c c c c c";
+    }
+}
